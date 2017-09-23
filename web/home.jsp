@@ -1,3 +1,4 @@
+<%@include file="WEB-INF/" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,5 +8,6 @@
     </head>
     <body>
         <h1>Home Projeto 03</h1>
+        
     </body>
 </html>
