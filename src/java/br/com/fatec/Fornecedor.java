@@ -1,6 +1,5 @@
 package br.com.fatec;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import java.util.ArrayList;
 
 public class Fornecedor {
@@ -13,20 +12,30 @@ public class Fornecedor {
     
     //Aguns dados para a tabela
     public static ArrayList<Fornecedor> list; 
-    public static ArrayList<Fornecedor> getList(){    
-        if(list==null){
-    list = new ArrayList<>();
-    Fornecedor c1 =new Fornecedor();
-    c1.setNome("fulano");
-    c1.setEmail("fulano@gmail.com");
-    c1.setTelefone("13 9 88899988");
-    list.add(c1);
-    Fornecedor c2 =new Fornecedor();
-    c2.setNome("beltrano");
-    c2.setEmail("beltrano@gmail.com");
-    c2.setTelefone("13 9 88899988");
-    list.add(c2);   
-    }
+        public static ArrayList<Fornecedor> getList(){    
+            if(list==null){
+        list = new ArrayList<>();
+        
+        //primeiro fornecedor
+        Fornecedor c1 =new Fornecedor();
+            c1.setNome("fulano");
+            c1.setCnpj("12345678910");
+            c1.setR_social("Sami Murande");
+            c1.setEmail("fulano@gmail.com");
+            c1.setTelefone("13 9 88899988");
+            c1.setEndereço("Rua dos marinheiros");
+        list.add(c1);
+        
+        //segundo fornecedor
+        Fornecedor c2 =new Fornecedor();
+            c2.setNome("beltrano");
+            c2.setR_social("João da esquina");
+            c2.setCnpj("11109876543");
+            c2.setEmail("beltrano@gmail.com");
+            c2.setTelefone("13 9 88899988");
+            c2.setEndereço("Rua 9 de junho");
+        list.add(c2);   
+        }
     return list;
     }
     //encapsulamento dos dados
