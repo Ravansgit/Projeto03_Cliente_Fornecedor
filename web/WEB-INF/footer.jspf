@@ -1,0 +1,7 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<div id="rodape">
+    <hr>
+    <h3>Projeto 03</h3>
+</div>
