@@ -7,7 +7,7 @@
         <title>FORNECEDOR</title>
     </head>
     <body>
-        <%@include file="WEB-INF/header.jspf"%>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <div class="formatação">
             <h1>Fornecedor</h1>
             <%
@@ -47,11 +47,11 @@
                     <div>Razão Social:</div>
                     <input type="text" name="r_social"/><br/>
                     <div>Cnpj:</div>
-                    <input type="text" name="cnpj"/><br/>
+                    <input type="number" name="cnpj"/><br/>
                     <div>Email:</div>
                     <input type="text" name="email"/><br/>
                     <div>Telefone:</div>
-                    <input type="text" name="telefone"/><br/>
+                    <input type="number" name="telefone"/><br/>
                     <div>Endereço:</div>
                     <input type="text" name="endereco"/><br/>
                     <br>
@@ -103,6 +103,6 @@
                     <%}%>
             </table> 
         </div>
-        <%@include file="WEB-INF/footer.jspf"%>
+                    <%@include file="WEB-INF/jspf/footer.jspf"%>
     </body>
 </html>

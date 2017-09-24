@@ -7,7 +7,7 @@
         <title>Clientes</title>
     </head>
     <body>
-        <%@include file="WEB-INF/header.jspf"%>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <div class="formatação">
 
 
@@ -61,17 +61,18 @@
                             <div>Nome:</div> 
                             <input type="text" name="nome"/><br/>
                             <div>Cpf:</div>
-                            <input type="text" name="cpf"/><br/>
+                            <input type="number" name="cpf"/><br/>
                             <div>Rg:</div>
-                            <input type="text" name="rg"/><br/>
+                            <input type="number" name="rg"/><br/>
                             <div>Email:</div>
                             <input type="text" name="email"/><br/>
                             <div>Telefone:</div>
-                            <input type="text" name="telefone"/><br/>
+                            <input type="number" name="telefone" /><br/>
                             <div>Endereço:</div>
                             <input type="text" name="endereco"/><br/>
                             <br>
-                            <input type="submit" name="add" value="Adcionar"/><br/>
+                            <input type="submit" name="add" value="Adicionar"/>&emsp;&emsp;
+                            <input type="reset" name="btn-calcelar" value="Limpar"/>
                         </form>
 
                         <%try {%>
@@ -104,6 +105,6 @@
                             </table>
                         </tr>
                         </div>
-                        <%@include file="WEB-INF/footer.jspf"%>
+                            <%@include file="WEB-INF/jspf/footer.jspf"%>
                         </body>
                         </html>
