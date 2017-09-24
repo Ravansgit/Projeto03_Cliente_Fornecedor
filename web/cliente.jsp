@@ -54,7 +54,7 @@
                     <th>Exclusão</th>
                 </tr>
 
-                <h2>Novo contato</h2>
+                
                 <fieldset>
                     <legend>>INFORMAÇÕES DOS CLIENTES.</legend>
                     <form name="frmCliente"><form>
