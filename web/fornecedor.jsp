@@ -59,6 +59,7 @@
                     <input type="reset" name="btn-calcelar" value="Limpar"/>
                 </form>
             </fieldset>
+            <div></div>
             <br>
             <hr>
             <table  cellspacing="5" cellpadding="20" border="5" align="center">
@@ -70,11 +71,11 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Endereço</th>
-                    <th>exclusão</th>
+                    <th>Exclusão</th>
                 </tr>    
                 <!--Formulario para novo contato de fornecedor.-->
                 <!--lugar onde fica o formulario normalmente-->  
-               
+
                 <%try {%>
                 <%int i = 0;%>
                 <%for (Fornecedor c : Fornecedor.getList()) {%>
@@ -103,6 +104,6 @@
                     <%}%>
             </table> 
         </div>
-                    <%@include file="WEB-INF/jspf/footer.jspf"%>
+        <%@include file="WEB-INF/jspf/footer.jspf"%>
     </body>
 </html>

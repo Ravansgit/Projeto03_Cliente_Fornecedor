@@ -17,7 +17,7 @@
                     if (request.getParameter("remove") != null) {
                         int i = Integer.parseInt(request.getParameter("index"));
 
-    //remove contatos        
+                        //remove contatos        
                         Cliente.getList().remove(i);
                     } else if ((request.getParameter("add") != null)) {
                         String nome = request.getParameter("nome");
@@ -54,7 +54,7 @@
                     <th>Exclusão</th>
                 </tr>
 
-                
+
                 <fieldset>
                     <legend>>INFORMAÇÕES DOS CLIENTES.</legend>
                     <form name="frmCliente"><form>
@@ -74,37 +74,39 @@
                             <input type="submit" name="add" value="Adicionar"/>&emsp;&emsp;
                             <input type="reset" name="btn-calcelar" value="Limpar"/>
                         </form>
+                </fieldset>
+                <div></div>
+                <br>
 
-                        <%try {%>
-                        <%int i = 0;%>
-                        <%for (Cliente c : Cliente.getList()) {%>
-                        <tr>
-                            <td><%=i%></td>
-                            <td><%=c.getNome()%></td>
-                            <td><%=c.getRg()%></td>
-                            <td><%=c.getCpf()%></td>
-                            <td><%=c.getEmail()%></td>
-                            <td><%=c.getTelefone()%></td>
-                            <td><%=c.getEndereco()%></td>
-                            <td>
-                                <form>
-                                    <input type="hidden" name="index" value="<%=(i++)%>"/>
-                                    <input type="submit" name="remove" value="Excluir"/>
-                                </form>
-                                </fieldset>
-                                <br>
-                            </td>
-                        </tr>
-                        <%}%>
-                        <%} catch (Exception ex) {%>
-                        <tr>
-                            <td colspan="5">
-                                Erro ao carregar a lista<%=ex.getMessage()%>
-                            </td>
-                            <%}%>
-                            </table>
-                        </tr>
-                        </div>
-                            <%@include file="WEB-INF/jspf/footer.jspf"%>
-                        </body>
-                        </html>
+                <%try {%>
+                <%int i = 0;%>
+                <%for (Cliente c : Cliente.getList()) {%>
+                <tr>
+                    <td><%=i%></td>
+                    <td><%=c.getNome()%></td>
+                    <td><%=c.getRg()%></td>
+                    <td><%=c.getCpf()%></td>
+                    <td><%=c.getEmail()%></td>
+                    <td><%=c.getTelefone()%></td>
+                    <td><%=c.getEndereco()%></td>
+                    <td>
+                        <form>
+                            <input type="hidden" name="index" value="<%=(i++)%>"/>
+                            <input type="submit" name="remove" value="Excluir"/>
+                        </form>
+                        <br>
+                    </td>
+                </tr>
+                <%}%>
+                <%} catch (Exception ex) {%>
+                <tr>
+                    <td colspan="5">
+                        Erro ao carregar a lista<%=ex.getMessage()%>
+                    </td>
+                    <%}%>
+            </table>
+        </tr>
+    </div>
+    <%@include file="WEB-INF/jspf/footer.jspf"%>
+</body>
+</html>

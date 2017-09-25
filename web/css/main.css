@@ -1,13 +1,5 @@
-
-
-
-
-
-
-
-
+/*Corpo*/
 body{
-    
     margin: 0px;
     background: #5C5C33;
     text-align: center;
@@ -16,19 +8,23 @@ body{
     position: relative;
     padding-bottom: 80px;
 }
+
+
+/*Layout dos botões*/ 
 nav ul>li{
     list-style: none;
     display:inline;
 }
+
 .btn{
- background-image: linear-gradient(to bottom,#333300, #000000);
+    background-image: linear-gradient(to bottom,#333300, #000000);
     font-family: Arial;
     color: #EBF0E6;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-    
 }
 
+/*Tratamento do cabecalho*/
 nav{
     text-align: center;
     width: 100%;
@@ -41,7 +37,7 @@ nav{
 
 h1{
     font-size: 45px;
-   color: #EBF0E6;
+    color: #EBF0E6;
 }
 
 
@@ -49,14 +45,13 @@ fieldset{
     background-image: linear-gradient(to bottom,#333300, #000000);
 }
 
+/*Centralizando campos*/
 #meiohome{
-    float: top;
-    margin-top: -8px;
-    padding-top: 10px;
-    
-    
+    width: 500px;
+    margin: 0 auto;
 }
 
+/*Rodapé das páginas*/
 #rodape{
     width: 100%;
     height: 3px;
@@ -64,11 +59,11 @@ fieldset{
     float: top;
     position: relative;
     background: #8FAB73;
-    
-     
-   
-    
 }
 
-
-
+/*Layout da tabela*/
+table{
+    background: #8FAB73;
+    margin: 0 auto;
+    line-height: 1.5;
+}
