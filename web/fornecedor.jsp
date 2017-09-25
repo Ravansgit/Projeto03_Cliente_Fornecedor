@@ -74,7 +74,7 @@
                 </tr>    
                 <!--Formulario para novo contato de fornecedor.-->
                 <!--lugar onde fica o formulario normalmente-->  
-                <h2>lista</h2>
+               
                 <%try {%>
                 <%int i = 0;%>
                 <%for (Fornecedor c : Fornecedor.getList()) {%>
