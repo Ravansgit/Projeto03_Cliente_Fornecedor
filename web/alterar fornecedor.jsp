@@ -41,17 +41,17 @@
         <h1>Alterar Fornecedor</h1>
         <form>
             <input type="hidden" name="index" value="<%=i%>">
-            <label>Nome:</label>
+            <div>Nome:</div>
             <input type="text" name="nome" value="<%=Fornecedor.getList().get(i).getNome()%>"/><br/>
-            <label>Razão Social:</label>
+            <div>Razão Social:</div>
             <input type="text" name="razao" value="<%=Fornecedor.getList().get(i).getR_social()%>" /><br/>
-            <label>CNPJ:</label>
+            <div>CNPJ:</div>
             <input type="text" name="cnpj" value="<%=Fornecedor.getList().get(i).getCnpj()%>" /><br/>
-            <label>Email:</label>
+            <div>Email:</div>
             <input type="text" name="email" value="<%=Fornecedor.getList().get(i).getEmail()%>" /><br/>
-            <label>Telefone:</label>
+            <div>Telefone:</div>
             <input type="text" name="telefone" value="<%=Fornecedor.getList().get(i).getTelefone()%>" /><br/>
-            <label>Endereço:</label>
+            <div>Endereço:</div>
             <input type="text" name="endereco" value="<%=Fornecedor.getList().get(i).getEndereço()%>" /><br/>
             <input type="submit" name="mudar" value="Confirmar"/>
         </form>   

@@ -36,18 +36,18 @@
         <h1>Alterar Cliente</h1>
             <form>
                 <input type="hidden" name="index" value="<%=i%>">
-                    <label>Nome:</label>
+                    <div>Nome:</div>
                     <input type="text" name="nome" value="<%=Cliente.getList().get(i).getNome()%>"/><br/>
-                    <label>CPF:</label>
-                    <input type="text" name="cpf" value="<%=Cliente.getList().get(i).getCpf()%>" /></><br/>
-                    <label>RG:</label>
-                    <input type="text" name="rg" value="<%=Cliente.getList().get(i).getRg()%>" /></><br/>
-                    <label>Email:</label>
-                    <input type="text" name="email" value="<%=Cliente.getList().get(i).getEmail()%>" /></><br/>
-                    <label>Telefone:</label>
-                    <input type="text" name="telefone" value="<%=Cliente.getList().get(i).getTelefone()%>" /></><br/>
-                    <label>Endereço:</label>
-                    <input type="text" name="endereco" value="<%=Cliente.getList().get(i).getEndereco()%>" /></><br/>
+                    <div>CPF:</div>
+                    <input type="text" name="cpf" value="<%=Cliente.getList().get(i).getCpf()%>" /><br/>
+                    <div>RG:</div>
+                    <input type="text" name="rg" value="<%=Cliente.getList().get(i).getRg()%>" /><br/>
+                    <div>Email:</div>
+                    <input type="text" name="email" value="<%=Cliente.getList().get(i).getEmail()%>" /><br/>
+                    <div>Telefone:</div>
+                    <input type="text" name="telefone" value="<%=Cliente.getList().get(i).getTelefone()%>" /><br/>
+                    <div>Endereço:</div>
+                    <input type="text" name="endereco" value="<%=Cliente.getList().get(i).getEndereco()%>" /><br/>
                     <input type="submit" name="mudar" value="Confirmar"/>
             </form>   
         <%@include file="WEB-INF/jspf/footer.jspf"%>        
