@@ -8,9 +8,6 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf"%>
-        <div class="formatação">
-
-
             <h1>Clientes</h1>
             <%
                 try {
@@ -19,6 +16,12 @@
 
                         //remove contatos        
                         Cliente.getList().remove(i);
+                    }else if ((request.getParameter("alterar") != null)) {
+                        int i = Integer.parseInt(request.getParameter("index"));
+                        //remove contatos        
+                        Cliente.getList().get(i);
+                        response.sendRedirect(request.getRequestURI());
+                        
                     } else if ((request.getParameter("add") != null)) {
                         String nome = request.getParameter("nome");
                         String cpf = request.getParameter("cpf");
@@ -26,6 +29,7 @@
                         String email = request.getParameter("email");
                         String telefone = request.getParameter("telefone");
                         String endereco = request.getParameter("endereco");
+                        
                         Cliente c = new Cliente();
                         c.setNome(nome);
                         c.setCpf(cpf);
@@ -36,7 +40,6 @@
                         Cliente.getList().add(c);
                         response.sendRedirect(request.getRequestURI());
                     }
-
                 } catch (Exception ex) {
             %>
             <div>Erro ao processar form! </div>
@@ -52,11 +55,10 @@
                     <th>Telefone</th>
                     <th>Endereço</th>
                     <th>Exclusão</th>
+                    <th>Alterar</th>
                 </tr>
 
-
                 <fieldset>
-                    <legend>>INFORMAÇÕES DOS CLIENTES.</legend>
                     <form name="frmCliente"><form>
                             <div>Nome:</div> 
                             <input type="text" name="nome"/><br/>
@@ -91,10 +93,17 @@
                     <td><%=c.getEndereco()%></td>
                     <td>
                         <form>
-                            <input type="hidden" name="index" value="<%=(i++)%>"/>
+                            <input type="hidden" name="index" value="<%=(i)%>"/>
                             <input type="submit" name="remove" value="Excluir"/>
                         </form>
                         <br>
+                    </td>
+                    <!--tags que mostra a opçao de alterar-->
+                    <td>
+                        <form action="altera cliente.jsp">
+                            <input type="hidden" name="index" value="<%=(i++)%>"/>
+                            <input type="submit" name="alterar" value="Alterar"/>
+                        </form>
                     </td>
                 </tr>
                 <%}%>

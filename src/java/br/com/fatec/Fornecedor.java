@@ -14,27 +14,26 @@ public class Fornecedor {
     public static ArrayList<Fornecedor> list; 
         public static ArrayList<Fornecedor> getList(){    
             if(list==null){
-        list = new ArrayList<>();
-        
-        //primeiro fornecedor
-        Fornecedor c1 =new Fornecedor();
-            c1.setNome("fulano");
-            c1.setCnpj("12345678910");
-            c1.setR_social("Sami Murande");
-            c1.setEmail("fulano@gmail.com");
-            c1.setTelefone("13 9 88899988");
-            c1.setEndereço("Rua dos marinheiros");
-        list.add(c1);
-        
-        //segundo fornecedor
-        Fornecedor c2 =new Fornecedor();
-            c2.setNome("beltrano");
-            c2.setR_social("João da esquina");
-            c2.setCnpj("11109876543");
-            c2.setEmail("beltrano@gmail.com");
-            c2.setTelefone("13 9 88899988");
-            c2.setEndereço("Rua 9 de junho");
-        list.add(c2);   
+            list = new ArrayList<>();
+            //primeiro fornecedor
+            Fornecedor f1 =new Fornecedor();
+                f1.setNome("fulano");
+                f1.setCnpj("12345678910");
+                f1.setR_social("Sami Murande");
+                f1.setEmail("fulano@gmail.com");
+                f1.setTelefone("13 9 88899988");
+                f1.setEndereço("Rua dos marinheiros");
+            list.add(f1);
+
+            //segundo fornecedor
+            Fornecedor f2 =new Fornecedor();
+                f2.setNome("beltrano");
+                f2.setR_social("João da esquina");
+                f2.setCnpj("11109876543");
+                f2.setEmail("beltrano@gmail.com");
+                f2.setTelefone("13 9 88899988");
+                f2.setEndereço("Rua 9 de junho");
+            list.add(f2);   
         }
     return list;
     }

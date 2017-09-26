@@ -17,6 +17,13 @@
                         //remove contatos        
                         Fornecedor.getList().remove(i);
                         response.sendRedirect(request.getRequestURI());
+                        
+                    }else if ((request.getParameter("alterar") != null)) {
+                        int i = Integer.parseInt(request.getParameter("index"));
+                        //remove contatos        
+                        Fornecedor.getList().get(i);
+                        response.sendRedirect(request.getRequestURI());
+                        
                     } else if ((request.getParameter("add") != null)) {
                         String nome = request.getParameter("nome");
                         String r_social = request.getParameter("r_social");
@@ -25,14 +32,14 @@
                         String telefone = request.getParameter("telefone");
                         String endereco = request.getParameter("endereco");
 
-                        Fornecedor c = new Fornecedor();
-                        c.setNome(nome);
-                        c.setR_social(r_social);
-                        c.setCnpj(cnpj);
-                        c.setEmail(email);
-                        c.setTelefone(telefone);
-                        c.setEndereço(endereco);
-                        Fornecedor.getList().add(c);
+                        Fornecedor f = new Fornecedor();
+                        f.setNome(nome);
+                        f.setR_social(r_social);
+                        f.setCnpj(cnpj);
+                        f.setEmail(email);
+                        f.setTelefone(telefone);
+                        f.setEndereço(endereco);
+                        Fornecedor.getList().add(f);
                         response.sendRedirect(request.getRequestURI());
                     }
                 } catch (Exception ex) {
@@ -40,7 +47,6 @@
             <div>Erro ao processar form! </div>
             <%}%>
             <fieldset>
-                <legend>Formulario para novo fornecedor.</legend>
                 <form name="frmFornecedor">
                     <div>Nome:</div>
                     <input type="text" name="nome"/><br/>
@@ -72,6 +78,7 @@
                     <th>Telefone</th>
                     <th>Endereço</th>
                     <th>Exclusão</th>
+                    <th>Alterar</th>
                 </tr>    
                 <!--Formulario para novo contato de fornecedor.-->
                 <!--lugar onde fica o formulario normalmente-->  
@@ -87,11 +94,19 @@
                     <td><%=c.getEmail()%></td>
                     <td><%=c.getTelefone()%></td>
                     <td><%=c.getEndereço()%></td>
-
+                    
+                     <!--tags que mostra a opçao de excluir-->
                     <td>
                         <form>
-                            <input type="hidden" name="index" value="<%=(i++)%>"/>
+                            <input type="hidden" name="index" value="<%=(i)%>"/>
                             <input type="submit" name="remove" value="Excluir"/>
+                        </form>
+                    </td>
+                    <!--tags que mostra a opçao de alterar-->
+                    <td>
+                        <form action="alterar fornecedor.jsp">
+                            <input type="hidden" name="index" value="<%=(i++)%>"/>
+                            <input type="submit" name="alterar" value="Alterar"/>
                         </form>
                     </td>
                 </tr>
